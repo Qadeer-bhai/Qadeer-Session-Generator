@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,42 +7,61 @@
   <title>VRT PAIR CODE</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
+/* 🌟 Animated Gradient Background */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  background: linear-gradient(to bottom, #2c3e50, #4ca1af); /* Subtle gradient */
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffdde1, #fbc2eb);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
   font-family: 'Arial', sans-serif;
   color: #ecf0f1;
+  overflow: hidden;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* 🌟 Floating Cartoon Elements */
+.cartoon-container {
+  position: fixed;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
 }
 
-.box {
-  width: 350px;
-  padding: 20px;
-  position: relative;
-  text-align: center;
-  background-color: #34495e; /* Darker background */
-  border-radius: 15px;
-  border: 1px solid #bdc3c7;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Softer shadows */
+.cartoon {
+  position: absolute;
+  width: 150px;
+  animation: moveCartoon 10s linear infinite;
 }
 
-.centered-text {
-  font-size: 24px;
-  font-weight: bold;
-  color: #1abc9c; /* Calming green */
-  letter-spacing: 1.5px;
+.balloon {
+  width: 100px;
+  animation: moveBalloon 15s linear infinite;
 }
 
+@keyframes moveCartoon {
+  0% { transform: translateX(-100px) translateY(10px); opacity: 0.5; }
+  50% { transform: translateX(50vw) translateY(-20px); opacity: 1; }
+  100% { transform: translateX(100vw) translateY(30px); opacity: 0.5; }
+}
+
+@keyframes moveBalloon {
+  0% { transform: translateY(100vh) translateX(10px); opacity: 0.5; }
+  50% { transform: translateY(50vh) translateX(-10px); opacity: 1; }
+  100% { transform: translateY(-100px) translateX(20px); opacity: 0.5; }
+}
+
+/* 🌟 Input Field Background */
 .input-container {
   display: flex;
   flex-direction: row;
@@ -50,7 +70,7 @@ body {
   padding: 12px;
   margin-top: 20px;
   gap: 10px;
-  background-color: #2c3e50; /* Matches page style */
+  background-color: #2c3e50;
   border: 2px solid #16a085;
 }
 
@@ -60,8 +80,8 @@ body {
   font-size: 16px;
   border: none;
   border-radius: 8px 0 0 8px;
-  background-color: #fff;
-  color: #34495e;
+  background-color: #3498db;
+  color: white;
   text-align: center;
 }
 
@@ -84,66 +104,34 @@ body {
 }
 
 .input-container button:hover {
-  background: #16a085; /* Slightly darker on hover */
+  background: #16a085;
   transform: scale(1.05);
 }
-
-.waiting-message {
-  font-size: 14px;
-  color: #e74c3c; /* Contrasting red */
-  margin-top: 15px;
-  padding: 10px;
-  border: 1px solid #e74c3c;
-  border-radius: 8px;
-  animation: fade-in 1s ease-in-out infinite;
-}
-
-@keyframes fade-in {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 500px) {
-  .box {
-    width: 95%;
-    padding: 15px;
-  }
-
-  .input-container {
-    flex-direction: column;
-  }
-
-  .input-container input,
-  .input-container button {
-    width: 100%;
-    margin: 5px 0;
-  }
-}
-
   </style>
-  
 </head>
 <body>
+  
+  <!-- 🌟 Floating Cartoon Elements -->
+  <div class="cartoon-container">
+    <img src="cartoon-cloud.png" class="cartoon" alt="Cloud">
+    <img src="cartoon-balloon.png" class="cartoon balloon" alt="Balloon">
+  </div>
+
+  <!-- 🌟 Pairing Code Box -->
   <div class="container">
     <div class="main">
       <div class="box" id="box">
         <div id="text">
           <i class="fa fa-user"></i>
           <p>
-            <h3 class="centered-text">VRT PAIRING CODE</h3>
+            <h3 class="centered-text">QADEER PAIRING CODE</h3>
             <br>
-            <h6>Powered by Vortex Rebirth. You shouldn't be here, but welcome.</h6>
+            <h6>Powered by Qadeer Khan. You shouldn't be here, but welcome.</h6>
             <h6>Enter Your Number with Country Code. Don't mess it up.</h6>
             <div class="input-container">
-              <input placeholder="923079749129" type="number" id="number" name="">
+              <input placeholder="923****" type="number" id="number">
               <button id="submit">Submit</button>
             </div>
-
             <a id="waiting-message" class="centered-text" style="display: none;">You're lucky. Waiting...</a>
             <br><br>
             <main id="pair"></main>
@@ -152,12 +140,24 @@ body {
       </div>
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
+
+  <!-- 🌟 Particles.js Effect -->
+  <div id="particles-js"></div>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80 },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 4 },
+        "move": { "speed": 2 }
+      }
+    });
+
     let a = document.getElementById("pair");
     let b = document.getElementById("submit");
     let c = document.getElementById("number");
-    let box = document.getElementById("box");
 
     async function Copy() {
       let text = document.getElementById("copy").innerText;
@@ -181,26 +181,14 @@ body {
         a.innerHTML = '<a style="color:red;font-weight:bold">Invalid Number. Try Again.</a><br><br>';
       } else {
         const Wasi_Tech = c.value.replace(/[^0-9]/g, "");
-        let bb = "";
-        let bbc = "";
-        const cc = Wasi_Tech.split('');
-        cc.map(a => {
-          bbc += a;
-          if (bbc.length == 3) {
-            bb += " " + a;
-          } else if (bbc.length == 8) {
-            bb += " " + a;
-          } else {
-            bb += a;
-          }
-        });
+        let formattedNumber = "+" + Wasi_Tech.replace(/(\d{3})(\d{5})(\d+)/, "$1 $2 $3");
         c.type = "text";
-        c.value = "+" + bb;
+        c.value = formattedNumber;
         c.style = "color:yellow;font-size:20px";
         a.innerHTML = '<a style="color:white;font-weight:bold">Wait for it...</a><br><br>';
         let { data } = await axios(`/code?number=${Wasi_Tech}`);
         let code = data.code || "SERVICE DOWN. FIX IT.";
-        a.innerHTML = '<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:white;font-weight:bold">' + code + '</span></font><br><br><br>';
+        a.innerHTML = `<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:white;font-weight:bold">${code}</span></font><br><br><br>`;
       }
     });
   </script>
