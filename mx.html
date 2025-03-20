@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FZ2GBVV4SW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FZ2GBVV4SW');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mxgamecoder session</title>
+    <meta name="description" content="qadeer: session">
+    <meta name="keywords" content="qadeer">
+    <meta name="author" content="qadeer">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+/* 🔥 SMOKY BACKGROUND EFFECT */
+body::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: url('https://i.imgur.com/q93gX6S.gif') repeat;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: -2;
+    animation: smoke-move 15s infinite linear;
+}
+
+@keyframes smoke-move {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(5deg) scale(1.05); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+/* 💀 GLITCHING TEXT */
+@keyframes glitch {
+    0% { 
+        text-shadow: 2px 2px rgba(255, 0, 85, 0.8), -2px -2px rgba(0, 255, 255, 0.8);
+        transform: translate(0px, 0px) skew(0deg);
+        opacity: 1;
+    }
+    15% { 
+        text-shadow: -1px 3px rgba(255, 204, 0, 0.7), 2px -2px rgba(255, 0, 85, 0.6);
+        transform: translate(-1px, 1px) skew(-1deg);
+        opacity: 0.95;
+    }
+    30% { 
+        text-shadow: 3px -2px rgba(255, 0, 85, 0.6), -2px 2px rgba(0, 255, 255, 0.7);
+        transform: translate(1px, -1px) skew(1deg);
+        opacity: 0.9;
+    }
+    45% { 
+        text-shadow: -3px -1px rgba(255, 204, 0, 0.5), 3px 1px rgba(255, 0, 85, 0.5);
+        transform: translate(-2px, 2px) skew(-0.5deg);
+        opacity: 0.85;
+    }
+    60% { 
+        text-shadow: 2px -3px rgba(0, 255, 255, 0.7), -2px 3px rgba(255, 0, 85, 0.7);
+        transform: translate(2px, -2px) skew(1deg);
+        opacity: 0.9;
+    }
+    75% { 
+        text-shadow: -2px 3px rgba(255, 204, 0, 0.6), 2px -3px rgba(255, 0, 85, 0.6);
+        transform: translate(-1px, 1px) skew(-1deg);
+        opacity: 0.95;
+    }
+    100% { 
+        text-shadow: 2px 2px rgba(255, 0, 85, 0.8), -2px -2px rgba(0, 255, 255, 0.8);
+        transform: translate(0px, 0px) skew(0deg);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 30px;
+    animation: glitch 1.5s infinite ease-in-out alternate;
+    position: relative;
+}
+
+/* 🔥 SHAKING BUTTONS */
+.button-container {
+    margin: 15px 0;
+    animation: shake 0.6s infinite alternate; /* Duration بڑھا دی */
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg) translate(0, 0); }
+    25% { transform: rotate(0.5deg) translate(1px, -1px); }
+    50% { transform: rotate(-0.5deg) translate(-1px, 1px); }
+    75% { transform: rotate(0.5deg) translate(1px, -1px); }
+    100% { transform: rotate(0deg) translate(0, 0); }
+}
+
+/* 🔮 DARK MAGIC RUNES */
+.vortex-seal {
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, rgba(255, 30, 85, 0.9) 15%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0) 90%);
+    border: 2px solid rgba(255, 30, 85, 0.8);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 40px rgba(255, 30, 85, 0.6), 0 0 80px rgba(255, 100, 150, 0.3);
+    animation: vortex-spin 4s linear infinite, glow-pulse 2s infinite alternate, seal-shake 0.5s infinite alternate ease-in-out;
+}
+
+@keyframes vortex-spin {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    100% { transform: translateX(-50%) rotate(360deg); }
+}
+
+@keyframes glow-pulse {
+    0% { box-shadow: 0 0 20px rgba(255, 30, 85, 0.6), 0 0 50px rgba(255, 100, 150, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(255, 50, 105, 0.8), 0 0 60px rgba(255, 120, 170, 0.4); }
+    100% { box-shadow: 0 0 40px rgba(255, 70, 125, 0.9), 0 0 80px rgba(255, 140, 190, 0.5); }
+}
+
+@keyframes seal-shake {
+    0% { transform: translateX(-50%) rotate(0deg) translateY(0); }
+    50% { transform: translateX(-50%) rotate(1deg) translateY(1px); }
+    100% { transform: translateX(-50%) rotate(-1deg) translateY(-1px); }
+}
+
+/* ⚡ SHADOW CLONES ON BUTTON HOVER */
+.glow-on-hover {
+    width: 250px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: none;
+    border: 2px solid #ff0055;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+    border-radius: 8px;
+    animation: button-glitch 0.3s infinite alternate;
+}
+
+.glow-on-hover:hover::before {
+    content: " ";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    background: linear-gradient(45deg, #ff0055, #ffcc00, #00ffcc, #ff0055);
+    background-size: 300%;
+    z-index: -1;
+    filter: blur(15px);
+    animation: neon-glow 3s infinite linear;
+}
+
+@keyframes neon-glow {
+    0% { background-position: 0 0; }
+    50% { background-position: 100% 0; }
+    100% { background-position: 0 0; }
+}
+
+.glow-on-hover:hover {
+    animation: shadow-clone 0.3s infinite alternate;
+}
+
+@keyframes shadow-clone {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* 💀 FASTER GLITCH */
+@keyframes button-glitch {
+    0% { transform: translate(0) skew(0deg); opacity: 1; filter: blur(0px); }
+    15% { transform: translate(-3px, 2px) skew(1deg); opacity: 0.9; filter: blur(1px); }
+    30% { transform: translate(4px, -3px) skew(-1deg); opacity: 0.95; filter: blur(0px); }
+    45% { transform: translate(-5px, 3px) skew(2deg); opacity: 0.85; filter: blur(1.5px); }
+    60% { transform: translate(3px, -2px) skew(-1deg); opacity: 0.92; filter: blur(0.5px); }
+    75% { transform: translate(-2px, 4px) skew(1.5deg); opacity: 0.88; filter: blur(1px); }
+    100% { transform: translate(0) skew(0deg); opacity: 1; filter: blur(0px); }
+}
+
+    </style>
+</head>
+
+<body>
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .button-container {
+            margin: 10px 0;
+        }
+
+        .glow-on-hover {
+            font-size: 16px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(45deg, #ff0055, #ffcc00);
+            color: white;
+            cursor: pointer;
+            outline: none;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 0 10px rgba(255, 0, 85, 0.5);
+        }
+
+        .glow-on-hover:hover {
+            box-shadow: 0 0 20px rgba(255, 0, 85, 0.8);
+            transform: scale(1.05);
+        }
+
+        .glow-on-hover:active {
+            transform: scale(0.98);
+        }
+    </style>
+<head>
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .button-container {
+            margin: 10px 0;
+        }
+
+        .glow-on-hover {
+            font-size: 16px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(45deg, #ff0055, #ffcc00);
+            color: white;
+            cursor: pointer;
+            outline: none;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 0 10px rgba(255, 0, 85, 0.5);
+        }
+
+        .glow-on-hover:hover {
+            box-shadow: 0 0 20px rgba(255, 0, 85, 0.8);
+            transform: scale(1.05);
+        }
+
+        .glow-on-hover:active {
+            transform: scale(0.98);
+        }
+    </style>
+<head>
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .button-container {
+            margin: 10px 0;
+        }
+
+        /* Smooth & Modern Button Styling */
+        .glow-on-hover {
+            font-size: 16px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(45deg, #ff0055, #ffcc00);
+            color: white;
+            cursor: pointer;
+            outline: none;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 10px rgba(255, 0, 85, 0.5);
+            overflow: hidden;
+        }
+
+        /* Smooth Hover Effect */
+        .glow-on-hover:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 0, 85, 0.8), 0 0 40px rgba(255, 204, 0, 0.6);
+        }
+
+        /* Click Effect */
+        .glow-on-hover:active {
+            transform: scale(0.98);
+            box-shadow: 0 0 10px rgba(255, 0, 85, 0.6);
+        }
+
+        /* Glow Animation */
+        @keyframes glowing {
+            0% { box-shadow: 0 0 10px rgba(255, 0, 85, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(255, 100, 150, 0.7); }
+            100% { box-shadow: 0 0 10px rgba(255, 0, 85, 0.5); }
+        }
+
+        /* Apply Glow Animation */
+        .glow-on-hover {
+            animation: glowing 1.5s infinite alternate;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="vortex-seal"></div>
+
+    <div class="button-container">
+        <button class="glow-on-hover" onclick="window.open('/pair', '_blank')">PAIR CODE</button>
+    </div>
+
+    <div class="button-container">
+        <button class="glow-on-hover" onclick="window.open('/wasiqr', '_blank')">QR CODE</button>
+    </div>
+
+    <div class="button-container">
+        <button class="glow-on-hover" onclick="window.open('https://github.com/Qadeer-bhai/TOFAN-MD', '_blank')">REPO</button>
+    </div>
+
+    <div class="button-container">
+        <button class="glow-on-hover" onclick="window.open('https://wa.me/923079749129', '_blank')">CONTACT ME</button>
+    </div>
+
+    <div class="button-container">
+        <button class="glow-on-hover" onclick="window.open('https://whatsapp.com/channel/0029Vaw6yRaBPzjZPtVtA80A', '_blank')">WA CHANNEL</button>
+    </div>
+
+    <link rel="import" href="./loader.html">
+
+</body>
+</html>
