@@ -1,8 +1,10 @@
+/*Qadeer Khan*/
+
 {
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/mx.html"
+      "destination": "/pair.html"
     }
   ]
 }
