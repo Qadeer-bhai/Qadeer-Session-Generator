@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/itxxwasi.js"
+      "destination": "/mx.html"
     }
   ]
 }
