@@ -37,7 +37,7 @@ _0x9j0k.get('/', async (_0x2c3d, _0x4e5f) => {
                         '    🌩️ *VIP ENRT - Designed by the QADEER ',
                         '         QADEER KHAN KULACHI* 🌩️',
                         '    ╔════════════════════════',
-                        '    ║ 🔥 *『 Welcome to the REAL 』* 🔥',
+                        '    ║ 🔥 *『 Welcome to Qadeer Bots 』* 🔥',
                         '    ║',
                         '    ║ You\'re foolish enough to make it here.',
                         '    ║  Congrats, I guess.  ',
